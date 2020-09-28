@@ -1,0 +1,316 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    height: 100%;
+    min-width: 15cm;
+}
+
+header {
+    background-color: #64237c;
+}
+
+body {
+    /* Margin bottom by footer height */
+    background-image: url("background.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #4564bb;
+    height: 100%;
+    min-height: 15cm;
+}
+
+.footer {
+    background-color: #260531;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    margin-top: 50px;
+    height: 75px;
+}
+
+.navbar-toggler {
+    background-color: #ecdcf4;
+}
+
+.navbar-toggler-icon {
+    background-image: url("toggler-icon.png");
+    border-radius: 2.5px;
+}
+
+main {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.main-home{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.contacts{
+    padding-right: 15px;
+    max-width: 15cm;
+}
+
+#search {
+    border: #16181b 3px solid;
+    background-image: url("3844432-magnifier-search-zoom_110300.ico");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    padding-left: 40px;
+}
+
+#list-contacts {
+    width: 100%;
+    height: 350px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#list-contacts > .list-group-item{
+    padding: 0;
+}
+
+#list-contacts::-webkit-scrollbar,
+.chat-body::-webkit-scrollbar{
+    width: 8px; 
+    height: 8px;
+}
+
+#list-contacts::-webkit-scrollbar-thumb,
+.chat-body::-webkit-scrollbar-thumb{
+    background: #64237c;
+    border-radius: 4px;
+}
+
+#list-contacts::-webkit-scrollbar-thumb:hover,
+.chat-body::-webkit-scrollbar-thumb:hover{
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#list-contacts ::-webkit-scrollbar-thumb:active,
+.chat-body::-webkit-scrollbar-thumb:active{
+    background-color: #999999;
+}
+
+#list-contacts::-webkit-scrollbar-track,
+.chat-body::-webkit-scrollbar-track{
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+#list-contacts::-webkit-scrollbar-track:hover,
+#list-contacts::-webkit-scrollbar-track:active,
+.chat-body::-webkit-scrollbar-track:hover,
+.chat-body::-webkit-scrollbar-track:active{
+    background: #d4d4d4;
+}
+
+.contact-btn {
+    display: flex;
+    justify-content: left;
+    margin: 3px 0;
+    color: #000;
+    padding: 5px;
+}
+
+.contact-btn > .btn {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    font-size: 12px;
+}
+
+a{
+    color: #16181b;
+}
+
+li:empty {
+    list-style: none;
+    justify-items: left;
+}
+
+
+
+.chat {
+    width: 100%;
+    min-width: 5cm;
+}
+
+.chat-header {
+    display: flex;
+    flex-direction: row;
+    background-color: #64237c;
+    border-radius: 20px;
+    height: 55px;
+}
+
+.name{
+    height: fit-content;
+    padding-top: 15px;
+    padding-left: 15px;
+    color: #ffffff;
+}
+
+.chat-body {
+    margin-top: 5px;
+    padding: 0.5rem;
+    background-image: url("img-salaprin.png");
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.message {
+    background-color: rgba(133, 9, 175, 0.94);
+    border-radius: 10px;
+    color: #d4d3d3;
+    max-width: 20cm;
+    width: fit-content;
+    margin: 6px 0 0 auto;
+}
+
+.message  > * {
+    padding: 0.2rem;
+}
+
+.message > .text {
+    margin: 0 15px;
+}
+
+.message > .time {
+    text-align: right;
+    font-size: 10px;
+    min-width: 60px;
+}
+
+.message-response{
+    background-color: #acabab;
+    border-radius: 10px;
+    color: rgba(133, 9, 175, 0.94);
+    max-width: 20cm;
+    width: fit-content;
+    margin: 6px auto 0 0;
+}
+
+.message-response  > * {
+    padding: 0.2rem;
+}
+
+.message-response > .text {
+    margin: 0 15px;
+}
+
+.message-response > .time {
+    text-align: right;
+    font-size: 10px;
+    min-width: 60px;
+}
+
+.message-response > .sender{
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.btn-delete{
+    height: 30px;   
+    width: 35px;
+    background-image: url("delete.ico");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    float: right;
+}
+
+.chat-input {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+#message {
+    width: 95%;
+    border: 1.5px #64237c solid;
+}
+
+#send {
+    background-image: url("send.ico");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    background-color: #64237c;
+    width: 4%;
+    min-width: 1.5cm;
+    border-radius: 50px;
+}

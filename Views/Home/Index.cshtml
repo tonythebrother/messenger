@@ -1,0 +1,64 @@
+﻿@using Microsoft.AspNetCore.Identity 
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager 
+    @{ ViewData["Title"] = "Home Page"; } 
+    
+    @if (!SignInManager.IsSignedIn(User)) {
+        <div class="jumbotron">
+            <h1>Welcome</h1>
+            <p>
+                C# Messenger helps you communicate and share with 
+                the people who will be part of your life as a programmer .NET, 
+                in this community to learn more about these technologies that they provide.
+            </p>
+        </div>
+        } else {
+        <div class="main-home" id="main">
+            <div class="contacts">
+                <input type="search" class="form-control" id="search" v-model="search">
+                <br>
+
+                <ul id="list-contacts" class="list-group">
+                    <li class="list-group-item">
+                        <div class="contact-btn">
+                            <button class="btn" id="general-room" v-on:click="openChatRoom(chat, '@User.Identity.Name')">
+                            <img src="css/img-salaprin.png" alt="image not found" width="50px" class="rounded-circle" style="padding-right: 5px">
+                            {{chat}}
+                        </button>
+                        </div>
+                    </li>
+                    <li v-for="user in searchUser" class="list-group-item" v-if="user.email != '@User.Identity.Name'">
+                        <div class="contact-btn">
+                            <button class="btn" v-on:click="openChatRoom(user.email, '@User.Identity.Name')">
+                            <img src="css/silouette.png" alt="image not found" width="50px" class="rounded-circle" style="padding-right: 5px">
+                            {{user.email}}
+                        </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="chat">
+                <div class="chat-header">
+                    <div class='name' id='name-chat'>
+                        {{receiver}}
+                    </div>
+                </div>
+                <div class="chat-body" id="Chat">
+
+                </div>
+                <div class="chat-input" v-if="receiver !== 'Choose a chat'">
+                    <input class="form-control" id="message" placeholder="Enter Message" v-model="message" autocomplete="off">
+                    <input type="submit" class="btn btn-light" id="send" value="" v-on:click="sendMessage">
+                </div>
+            </div>
+
+        </div>
+        } 
+        
+        @section Scripts {
+
+        <script type="text/javascript" src="js/site.js">
+        </script>
+
+        }
